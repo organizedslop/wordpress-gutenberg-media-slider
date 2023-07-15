@@ -1,4 +1,4 @@
-# wordpress-media-slider
+# WordPress Gutenberg Media Slider
 v1.0
 by Blake/organizedSlop
 
