@@ -1,0 +1,160 @@
+/* --------------------------------------------------------
+    Containers
+-------------------------------------------------------- */
+.rlb-media-slider-outer-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.rlb-media-slider-inner-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.rlb-media-slider-editor-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+}
+
+/* --------------------------------------------------------
+    Content
+-------------------------------------------------------- */
+.rlb-media-slider-title {
+}
+
+.rlb-media-slider-link {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rlb-media-slider-content {
+    align-items: center;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    width: fit-content;
+
+}
+
+.rlb-media-slider-heading {
+}
+
+.rlb-media-slider-subheading {
+}
+
+.rlb-media-slider-slide {
+    align-items: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* Force Hardware Acceleration */
+    -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+    will-change: transform;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    -webkit-transition: -webkit-transform 0s;
+            transition: -webkit-transform 0s;
+            transition: transform 0s;
+            transition: transform 0s, -webkit-transform 0s;
+}
+.rlb-media-slider-slide:hover {
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------
+    Slide Animation
+-------------------------------------------------------- */
+.rlb-media-slider-slide-entering-from-left,
+.rlb-media-slider-slide-leaving-to-left {
+    -webkit-transform: translateX(-100%) !important;
+        -ms-transform: translateX(-100%) !important;
+            transform: translateX(-100%) !important;
+}
+.rlb-media-slider-slide-entering-from-right,
+.rlb-media-slider-slide-leaving-to-right {
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+}
+.rlb-media-slider-slide-selected {
+    /* The visible slide */
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+}
+.rlb-media-slider-slide-moving,
+.rlb-media-slider-slide-selected {
+    -webkit-transition: -webkit-transform 0.5s !important;
+            transition: -webkit-transform 0.5s !important;
+            transition: transform 0.5s !important;
+            transition: transform 0.5s, -webkit-transform 0.5s !important;
+}
+
+/* --------------------------------------------------------
+    Navigation
+-------------------------------------------------------- */
+.rlb-media-slider-navigation {
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+}
+.rlb-media-slider-marker {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    height: 0.8rem;
+    margin: 0.125rem;
+    -webkit-transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+            transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+    width: 0.8rem;
+}
+.rlb-media-slider-marker:hover {
+    cursor: pointer;
+}
+.rlb-media-slider-marker:not(.rlb-media-slider-marker-selected):hover {
+    /* All not selected markers */
+    background-color: rgba(255, 255, 255, 0.85);
+}
+.rlb-media-slider-marker.rlb-media-slider-marker-selected {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* --------------------------------------------------------
+    Editor
+-------------------------------------------------------- */
+.gutenberg-sidebar-label {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: calc(8px);
+    padding: 0px;
+}
